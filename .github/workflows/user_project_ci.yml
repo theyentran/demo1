@@ -42,7 +42,7 @@ jobs:
           tar -cf /tmp/caravel.tar -C $CARAVEL_ROOT .
 
       - name: Upload Caravel Tarball
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: caravel-tarball
           path: /tmp/caravel.tar
@@ -118,7 +118,7 @@ jobs:
           tar -cf /tmp/${{ env.dep_name }}.tar -C ${{ env.dep_root }} .
 
       - name: Upload Dependencies Tarball
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ env.dep_name }}-tarball
           path: /tmp/${{ env.dep_name }}.tar
@@ -201,7 +201,7 @@ jobs:
           tar -cf /tmp/design_${{ matrix.pdk }}.tar -C $GITHUB_WORKSPACE .
 
       - name: Upload Design_${{ matrix.pdk }} Tarball
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: design_${{ matrix.pdk }}-tarball
           path: /tmp/design_${{ matrix.pdk }}.tar
